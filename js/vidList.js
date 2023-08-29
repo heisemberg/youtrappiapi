@@ -9,9 +9,10 @@ export const vidList = async() => {
         const detailsData = await detailsResponse.json();
 
         const videosList = document.querySelector(".list-container");
+        const vidList = document.querySelector(".vid-list");
         videosList.insertAdjacentHTML("beforeend", /* html */`
         ${videosData.contents.map((value)=> /*html*/ `   
-        <div class="vid-list">
+        <div class="vid-list" idVideo=${value.video.videoId}>
             <a href="play-video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
             <div class="flex-div">
                 <img src="${detailsData.avatar[0].url}" alt="">
@@ -22,8 +23,17 @@ export const vidList = async() => {
                 </div>
             </div>
         </div>
-        `).join("")}
+        `).join("")
+        } 
         `)
+        vidList.addEventListener("click", function(event) {
+            const clickedItem = event.target;
+    
+            if (clickedItem) {
+                const id = localStorage.idVideo
+            }
+        }
+        )
     }
   
     catch (error) {
