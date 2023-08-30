@@ -40,10 +40,16 @@ nav{
 .nav-left .logo{
     width: 130px;
 }
-.nav-middle .mic-icon{
+.nav-middle .searchMic{
+    display: flex;
+    align-items: center;
+}
+.nav-middle .searchMic .mic-icon{
+    display:inline-block;
     width: 16px;
 }
-.nav-middle .search-box{
+.nav-middle .searchMic .search-box{
+    display:inline-block;
     border: 1px solid #ccc;
     margin-right: 15px;
     padding: 8px 12px;
@@ -58,30 +64,29 @@ nav{
 .nav-middle .search-box img{
     width: 15px;
 }
-
-.nav-middle .drop-down-search{
-    flex-direction: column;
-    width: 100%;
-    overflow: visible;
+.search-container{
+    position: relative;
+    display: inline-block;
 }
-
-.nav-middle .drop-down-search .drop-down-search-active{
-    margin-top: 5px;
-    width: 400px;
-    padding-left: 30px;
-    padding-top: 10px;
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .dropdown-content {
     position: absolute;
-    z-index: 5;
-    background: #fff;
-    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
     overflow-y: auto;
-}
-
-.nav-middle .drop-down-search .drop-down-search-active ul{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-}
-
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1;
+    padding: 5px 15px;
+  }
+  .dropdown-content p{
+    margin-bottom: 5px;
+  }
 /* -------sidebar-------- */
 
 .sidebar{
