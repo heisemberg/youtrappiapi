@@ -14,6 +14,8 @@ export const playVideo = async() => {
 
         if (foundVideo) {
             const videoTitle = foundVideo.video.title;
+            const views = foundVideo.video.stats.views;
+            const publishedTimeText = foundVideo.video.publishedTimeText;
 
         videoPlay.insertAdjacentHTML("beforeend", /* html */`
         <iframe height="700px" width="100%" src="https://www.youtube.com/embed/${idVideo}" frameborder="0" allowfullscreen></iframe>
@@ -22,7 +24,7 @@ export const playVideo = async() => {
         </div>
         <h3>${videoTitle}</h3>
         <div class="play-video-info">
-            <p>1225 Views &bull; 2 days ago</p>
+            <p>${views} Views &bull; ${publishedTimeText}</p>
             <div>
                 <a href=""><img src="images/like.png">125</a>
                 <a href=""><img src="images/dislike.png">2</a>
