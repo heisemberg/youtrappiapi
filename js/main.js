@@ -1,5 +1,6 @@
 import { vidList } from "./vidList.js";
 import { playVideo } from "./playVideo.js";
+import {rightSidebar} from "./rightSidebar.js";
 
 
 var menuIcon = document.querySelector('.menu-icon');
@@ -82,3 +83,4 @@ try {
 
 vidList();
 playVideo();
+rightSidebar();

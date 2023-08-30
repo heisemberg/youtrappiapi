@@ -12,17 +12,10 @@ export const playVideo = async() => {
         videoPlay.insertAdjacentHTML("beforeend", /* html */`
         <iframe height="700px" width="100%" src="https://www.youtube.com/embed/${idVideo}" frameborder="0" allowfullscreen></iframe>
         `)
-        const videoSidebar = document.querySelector(".right-sidebar");
-        videoSidebar.insertAdjacentHTML("beforeend", /* html */`
-        <div class="side-video-list">
-            <a href="" class="small-thumbnail"><img src="images/thumbnail1.png"></a>
-            <div class="vid-info">
-                <a href="">Best channel that help you to be a web developer</a>
-                <p>Easy Tutorials</p>
-                <p>15k Views</p>
-            </div>
-        </div>
-        `)   
+
+
+
+    
     }
   
     catch (error) {
