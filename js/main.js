@@ -79,7 +79,36 @@ try {
 	console.log(response.data);
 } catch (error) {
 	console.error(error);
-} */
+}
+
+
+// ---------------------videos detalils---------------------
+const axios = require('axios');
+
+const options = {
+  method: 'GET',
+  url: 'https://youtube138.p.rapidapi.com/video/details/',
+  params: {
+    id: 'kJQP7kiw5Fk',
+    hl: 'en',
+    gl: 'US'
+  },
+  headers: {
+    'X-RapidAPI-Key': 'f9e65797cfmshef45753f8b867fep1f0cf6jsneb94bce604e7',
+    'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+*/
+
+
+
 
 vidList();
 playVideo();
