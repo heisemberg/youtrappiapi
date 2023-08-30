@@ -14,7 +14,7 @@ export const rightSidebar = async() => {
         <div class="side-video-list" idVideo=${value.video.videoId}>
         <a href="" class="small-thumbnail"><img src=${value.video.thumbnails[3].url}></a>
         <div class="vid-info">
-            <a href="">Best channel that help you to be a web developer</a>
+            <a href="">${value.video.title}</a>
             <p>Easy Tutorials</p>
             <p>15k Views</p>
         </div>
