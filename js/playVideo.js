@@ -33,6 +33,75 @@ export const playVideo = async() => {
             </div>
         </div>
         <hr>
+        <div class="publisher">
+                <img src=${detailsData.avatar[0].url}>
+                <div>
+                    <p>${detailsData.title}</p>
+                    <span>${detailsData.stats.subscribers}k Subscribers</span>
+                </div>
+                <button type="button">Subscribe</button>
+            </div>
+            <div class="vid-description">
+                <p>${detailsData.description}</p>
+                
+                <hr>
+                <h4>134 Comments</h4>
+                <div class="add-comment">
+                    <img src="images/Jack.png">
+                    <input type="text" placeholder="Write Comments...">
+                </div>
+                <div class="old-comment">
+                    <img src="images/Jack.png">
+                    <div>
+                        <h3>Jack Nicholson <span>2 days ago</span></h3>
+                        <p>A global computer network providing a variety od information and communication facilities,
+                            consisting of interconnected networks using standardized communication protocols.</p>
+                        </p>
+                        <div class="acomment-action">
+                            <img src="images/like.png">
+                            <span>244</span>
+                            <img src="images/dislike.png">
+                            <span>2</span>
+                            <span>REPLY</span>
+                            <a href="">ALL Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comment">
+                    <img src="images/Jack.png">
+                    <div>
+                        <h3>Jack Nicholson <span>2 days ago</span></h3>
+                        <p>A global computer network providing a variety od information and communication facilities,
+                            consisting of interconnected networks using standardized communication protocols.</p>
+                        </p>
+                        <div class="acomment-action">
+                            <img src="images/like.png">
+                            <span>244</span>
+                            <img src="images/dislike.png">
+                            <span>2</span>
+                            <span>REPLY</span>
+                            <a href="">ALL Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comment">
+                    <img src="images/Jack.png">
+                    <div>
+                        <h3>Jack Nicholson <span>2 days ago</span></h3>
+                        <p>A global computer network providing a variety od information and communication facilities,
+                            consisting of interconnected networks using standardized communication protocols.</p>
+                        </p>
+                        <div class="acomment-action">
+                            <img src="images/like.png">
+                            <span>244</span>
+                            <img src="images/dislike.png">
+                            <span>2</span>
+                            <span>REPLY</span>
+                            <a href="">ALL Replies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `)
          } else {
             console.log(`No se encontró ningún video con idVideo ${idVideo}`);
