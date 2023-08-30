@@ -15,8 +15,8 @@ export const rightSidebar = async() => {
         <a href="" class="small-thumbnail"><img src=${value.video.thumbnails[3].url}></a>
         <div class="vid-info">
             <a href="">${value.video.title}</a>
-            <p>Easy Tutorials</p>
-            <p>15k Views</p>
+            <p>${detailsData.title}</p>
+            <p>${value.video.stats.views} Views &bull; ${value.video.publishedTimeText}</p>
         </div>
         </div>
         `).join("")
