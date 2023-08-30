@@ -14,7 +14,7 @@ export const vidList = async() => {
         <div class="vid-list" idVideo=${value.video.videoId}>
             <a href="play-video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
             <div class="flex-div">
-                <img src="${detailsData.avatar[0].url}" alt="">
+                <img src="${detailsData.avatar[0].url}">
                 <div class="vid-info">
                     <a href="play-video.html">${value.video.title}</a>
                     <p>${detailsData.title}</p>
@@ -25,6 +25,11 @@ export const vidList = async() => {
         `).join("")
         } 
         `)
+        const banner = document.querySelector(".banner");
+        banner.insertAdjacentHTML("beforeend", /* html */`
+        <img src="${detailsData.banner.desktop[5].url}">
+        `)
+
         const vidList = document.querySelectorAll(".vid-list")
         vidList.forEach(video => {
         video.addEventListener("click", () => {
