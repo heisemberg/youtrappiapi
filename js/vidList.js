@@ -1,8 +1,8 @@
 export const vidList = async() => {
     try {
         const [videosResponse, detailsResponse] = await Promise.all([
-            fetch("../jsonjson/channelVideos.json"),
-            fetch("../json/json/detailsVideos.json")
+            fetch("../json/channelVideos.json"),
+            fetch("../json/detailsVideos.json")
         ]);
 
         const videosData = await videosResponse.json();
