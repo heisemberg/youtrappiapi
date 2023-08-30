@@ -1,8 +1,8 @@
 export const playVideo = async() => {
     try {
         const [videosResponse, detailsResponse] = await Promise.all([
-            fetch("./youtrappiapi/json/channelVideos.json"),
-            fetch("./youtrappiapi/json/detailsVideos.json")
+            fetch("../json/channelVideos.json"),
+            fetch("../json/detailsVideos.json")
         ]);
         
         const idVideo = localStorage.getItem("ID");

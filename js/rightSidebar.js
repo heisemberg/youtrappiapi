@@ -1,8 +1,8 @@
 export const rightSidebar = async() => {
     try {
         const [videosResponse, detailsResponse] = await Promise.all([
-            fetch("./youtrappiapi/json/channelVideos.json"),
-            fetch("./youtrappiapi/json/detailsVideos.json")
+            fetch("../jsonjson/channelVideos.json"),
+            fetch("../json/json/detailsVideos.json")
         ]);
 
         const videosData = await videosResponse.json();
