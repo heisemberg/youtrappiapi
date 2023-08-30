@@ -59,6 +59,29 @@ nav{
     width: 15px;
 }
 
+.nav-middle .drop-down-search{
+    flex-direction: column;
+    width: 100%;
+    overflow: visible;
+}
+
+.nav-middle .drop-down-search .drop-down-search-active{
+    margin-top: 5px;
+    width: 400px;
+    padding-left: 30px;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 5;
+    background: #fff;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.nav-middle .drop-down-search .drop-down-search-active ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
 /* -------sidebar-------- */
 
 .sidebar{
