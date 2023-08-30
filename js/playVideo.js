@@ -5,10 +5,9 @@ export const playVideo = async() => {
             fetch("../json/detailsVideos.json")
         ]);
         
+        const idVideo = localStorage.getItem("ID");
         const videosData = await videosResponse.json();
         const detailsData = await detailsResponse.json();
-        const idVideo = localStorage.getItem("ID");
-       
         const videoPlay = document.querySelector(".play-video");
         
         videoPlay.insertAdjacentHTML("beforeend", /* html */`
@@ -16,7 +15,7 @@ export const playVideo = async() => {
         <div class="tags">
             <a href="">#Coding</a> <a href="">#Html</a> <a href="">#Css</a> <a href="">#JavaScript</a>
         </div>
-        <h3>${videoTitle}</h3>
+        <h3></h3>
         <div class="play-video-info">
             <p>1225 Views &bull; 2 days ago</p>
             <div>
