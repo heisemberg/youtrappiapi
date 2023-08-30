@@ -9,7 +9,6 @@ export const vidList = async() => {
         const detailsData = await detailsResponse.json();
 
         const videosList = document.querySelector(".list-container");
-        const vidList = document.querySelector(".vid-list");
         videosList.insertAdjacentHTML("beforeend", /* html */`
         ${videosData.contents.map((value)=> /*html*/ `   
         <div class="vid-list" idVideo=${value.video.videoId}>
@@ -26,17 +25,17 @@ export const vidList = async() => {
         `).join("")
         } 
         `)
-        vidList.addEventListener("click", function(event) {
-            const clickedItem = event.target;
-    
-            if (clickedItem) {
-                const id = localStorage.idVideo
-            }
-        }
-        )
+        const vidList = document.querySelectorAll(".vid-list")
+        vidList.forEach(video => {
+        video.addEventListener("click", () => {
+        let vidList = video.getAttribute("idVideo")
+        localStorage.setItem("ID",vidList)
+        })
+        })
     }
   
     catch (error) {
         console.error("Error al cargar los datos:", error);
     }
 }
+
