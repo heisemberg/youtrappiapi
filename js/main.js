@@ -119,3 +119,4 @@ const options = {
 vidList(options);
 playVideo(options);
 rightSidebar(options);
+

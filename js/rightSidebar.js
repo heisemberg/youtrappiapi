@@ -8,6 +8,7 @@ export const rightSidebar = async(options) => {
             fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options),
             fetch("https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options)
         ]); */
+
         const videosData = await videosResponse.json();
         const detailsData = await detailsResponse.json();
 
