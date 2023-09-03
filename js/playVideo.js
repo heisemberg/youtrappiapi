@@ -1,13 +1,13 @@
 export const playVideo = async(options) => {
     try {
-        const [videosResponse, detailsResponse] = await Promise.all([
+        /* const [videosResponse, detailsResponse] = await Promise.all([
             fetch("../json/channelVideos.json"),
             fetch("../json/detailsVideos.json")
-        ]);
-        /* const [videosResponse, detailsResponse] = await Promise.all([
+        ]); */
+         const [videosResponse, detailsResponse] = await Promise.all([
             fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options),
             fetch("https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options)
-        ]); */
+        ]);
         
         const idVideo = localStorage.getItem("ID");
         const videosData = await videosResponse.json();
