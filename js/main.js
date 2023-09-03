@@ -107,9 +107,15 @@ try {
 }
 */
 
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'f9e65797cfmshef45753f8b867fep1f0cf6jsneb94bce604e7',
+		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+	}
+};
 
 
-
-vidList();
-playVideo();
-rightSidebar();
+vidList(options);
+playVideo(options);
+rightSidebar(options);
